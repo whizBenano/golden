@@ -1,0 +1,92 @@
+.big {
+    display: flex;
+}
+
+.big .one {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.big .one h1 {
+    color: #707070;
+}
+
+.big .one .enter {
+    margin: 1rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.big .one .enter input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #636cff;
+    color: #636cff;
+    padding: 10px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+.big .one .enter label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #636cff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.big .one .enter input:focus ~ label,
+.big .one .enter input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #000;
+}
+
+.big .one button {
+    border: none;
+    background: #636cff;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.big .pic {
+    display: flex;
+    width: 40%;
+}
+
+
+@media screen and (max-width: 991px) {
+    .big {
+        padding: 5rem 2rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .big .one {
+        width: 100%;
+    }
+
+    .big .one h1 {font-size: 1.5rem; margin: auto;}
+
+    .big .pic {
+        width: 100%;
+    }
+
+    .big .pic img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}

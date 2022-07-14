@@ -1,0 +1,17 @@
+.complain {
+    background: #707070;
+    opacity: .9;
+    padding: 5rem;
+    text-align: center;
+    margin: 5rem;
+    line-height: 3rem;
+}
+
+.complain p {color: #fff;}
+
+@media screen and (max-width: 991px) {
+    .complain {
+        padding: 2rem;
+        margin: 2rem;
+    }
+}

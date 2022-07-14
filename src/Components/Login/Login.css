@@ -1,0 +1,116 @@
+.big {
+    width: 100vw;
+    max-width: 1440px;
+    height: 60vh;
+    display: flex;
+    margin: auto;
+}
+
+.big .box {
+    background: #707070;
+    opacity: .9;
+    color: #fff;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.big .box h2 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.big .box .enter {
+    position: relative;
+    margin: 3rem 0 1rem 0;
+}
+
+.big .box .enter input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+
+.big .box .enter label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.big .box .enter input:focus ~ label,
+.big .box .enter input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+}
+
+.big .box a {color: #fff;}
+
+.big .box .lnk {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background: #6c63ff;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    position: absolute;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.big .box .signup {
+    position: relative;
+    bottom: -8rem;
+}
+
+.big .pic {
+    width: 40%;
+    height: 100%;
+}
+
+.big .pic img {
+    height: 20rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .big {
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        position: relative;
+    }
+
+    .big .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .big .box h2 {
+        margin: 1rem 0;
+    }    
+
+    .big .box .lnk {font-size: .7rem;}
+
+    .big .pic img {
+        height: 60%;
+        margin: 5rem 0 0 -10rem;
+    }
+    
+}
