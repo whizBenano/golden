@@ -26,7 +26,7 @@ const Home = () => {
                 <h1>SPENCER'S ACADEMY</h1>
             </div>
             <div className='second'>
-                <img className='back' src={backdrop} />
+                <img className='back' src={backdrop} alt='' />
             </div>
         </div>
 
@@ -36,16 +36,16 @@ const Home = () => {
                 <Link to='courses' className='lnk'>GET STARTED</Link>
             </div>
             <div className='two'>
-                <img className='pic' src={pic} />
+                <img className='pic' src={pic} alt='' />
             </div>
         </div>
         
         <div className='foot'>
-            <a href='#'><img src={tw} title='follow us on Twitter' /></a>
-            <a href='#'><img src={fb} title='check our Facebook page' /></a>
-            <a href='#'><img src={ig} title='follow us on Instagram' /></a>
-            <a href='#'><img src={share} title='share this page' /></a>
-            <a href='#'><img src={info} title='Info' /></a>
+            <a href='/'><img src={tw} alt='' title='follow us on Twitter' /></a>
+            <a href='/'><img src={fb} alt='' title='check our Facebook page' /></a>
+            <a href='/'><img src={ig} title='follow us on Instagram' alt='' /></a>
+            <a href='/'><img src={share} alt='' title='share this page' /></a>
+            <a href='/'><img src={info} alt='' title='Info' /></a>
         </div>
     </div>
 

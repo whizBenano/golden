@@ -23,7 +23,7 @@ const Login = () => {
             </form>
         </div>
         <div className='pic'>
-            <img src={pic} />
+            <img src={pic} alt='' />
         </div>
 
         <Leg />

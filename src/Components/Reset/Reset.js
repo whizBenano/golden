@@ -14,7 +14,7 @@ const Reset = () => {
             <button>RESET</button>
         </div>
         <div className='pic'>
-            <img src={backdrop} />
+            <img src={backdrop} alt='' />
         </div>
 
         <Leg />

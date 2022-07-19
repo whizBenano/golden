@@ -43,7 +43,7 @@
     display: none;
     /* height: 0; */
     justify-content: space-between;
-    transition: 5s;
+    transition: .5s;
     padding: 0 2rem;
 }
 
@@ -52,7 +52,8 @@
     display: flex;
 }
 
-.container .active::before {
+.container .accordion .active::before {
+    color: red;
     transform: translate(-98%, -50%) rotate(225deg);
 }
 
@@ -92,9 +93,14 @@
 
     .container .panel {
         flex-direction: column-reverse;
+        padding: 0;
     }
 
     .container .panel .hold {
+        width: 100%;
+    }
+
+    .container .panel .hold p {
         width: 100%;
     }
 
