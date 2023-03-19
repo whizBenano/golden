@@ -11,30 +11,41 @@ const Courses = () => {
         accs.forEach(acc => {
             acc.addEventListener('click', () => {
                 acc.nextElementSibling.classList.toggle('active')
+
+                let panel = acc.nextElementSibling
+                if(panel.style.maxHeight) {
+                    panel.style.maxHeight = null
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px'
+                }
+            })
+        })    
+    }
+
+    const activate = () => {
+        // let accs = document.querySelectorAll('.accordion')
+        let accs = document.querySelectorAll('.panel')
+
+        accs.forEach(acc => {
+            acc.addEventListener('click', () => {
+                // acc.classList.toggle('active')
+                acc.classList.toggle('active')
+
+                let panel = acc.nextElementSibling
+                if(panel.style.maxHeight) {
+                    panel.style.maxHeight = null
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px'
+                }
             })
         })
-
-
-        // var acc = document.getElementsByClassName("accordion");
-        // var i
-        // for (i = 0; i < acc.length; i++) {
-        //     acc[i].addEventListener("click", function() {
-        //         this.classList.toggle("active");
-
-        //         var panel = this.nextElementSibling;
-        //         if (panel.style.maxHeight) {
-        //             panel.style.maxHeight = null;
-        //         } else {
-        //             panel.style.maxHeight = panel.scrollHeight + "px";
-        //         } 
-        //     });
-        // }
-    
     }
+
+    activate()
 
     return <div className='container'>
         <center><h2>Courses we offer</h2></center>
-            <button class="accordion" onClick={flip}>HTML</button>
+            <button class="accordion" onClick={flip} >HTML</button>
             <div class="panel">
                 <div className='hold'>
                     <p>

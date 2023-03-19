@@ -6,20 +6,23 @@ import Register from './Components/Register/Register'
 import Reset from './Components/Reset/Reset'
 import Courses from './Components/Courses/Courses'
 import NoPage from './Components/NoPage/NoPage'
+import './App.css'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 
 const App = () => {
     return (
         <BrowserRouter>
             <Nav />
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path='login' element={<Login />} />
-                <Route path='register' element={<Register />} />
-                <Route path='reset' element={<Reset />} />
-                <Route path='courses' element={<Courses />} /> 
-                <Route path='*' element={<NoPage />} /> 
-            </Routes>
+            <div className='app'>
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path='login' element={<Login />} />
+                    <Route path='register' element={<Register />} />
+                    <Route path='reset' element={<Reset />} />
+                    <Route path='courses' element={<Courses />} /> 
+                    <Route path='*' element={<NoPage />} /> 
+                </Routes>
+            </div>
         </BrowserRouter>
     )
 }
