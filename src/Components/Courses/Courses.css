@@ -50,7 +50,7 @@
 
 .container .tab .inner {
     max-height: 0;
-    transition: 1s;
+    transition: 1s ease-out;
     overflow: hidden;
 }
 
@@ -58,39 +58,6 @@
     max-height: 100vh;
     margin-top: 1rem;
 }
-
-
-
-
-
-/* .container .accordion {
-    width: 100%;
-    max-width: 1440px;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    background: #707070;
-    color: #fff;
-    margin: 1rem auto;
-    cursor: pointer;
-    position: relative;
-}
-
-.container .accordion::after {
-    content: '+';
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translate(-98%, -50%);
-    font-size: 1.5rem;
-    transition: .5s ease;
-}
-
-.active::after {
-    content: '-';
-} */
 
 .container .inner {
     width: 100%;
