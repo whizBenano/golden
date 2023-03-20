@@ -12,7 +12,58 @@
 
 .container h2 {color: #636cff; margin: 0 0 1rem 0;}
 
-.container .accordion {
+.container .tab {
+    position: relative;
+    padding: 0 1rem 1.2rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+    box-shadow: 0 5px 15px #00000099;
+}
+
+.container .tab input {appearance: none;}
+
+.container .tab label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #636cff;
+}
+
+.container .tab label::after {
+    content: '+';
+    position: absolute;
+    right: 2rem;
+    font-size: 2rem;
+    opacity: .2;
+    transition: 1s;
+}
+
+.container .tab:hover label::after {
+    opacity: 1;
+}
+
+.container .tab input:checked ~ label::after {
+    color: #f00;
+    transform: rotate(225deg);
+}
+
+.container .tab .inner {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.container .tab input:checked ~ .inner {
+    max-height: 100vh;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* .container .accordion {
     width: 100%;
     max-width: 1440px;
     text-align: left;
@@ -39,73 +90,96 @@
 
 .active::after {
     content: '-';
-}
+} */
 
-.container .panel {
+.container .inner {
     width: 100%;
-    max-width: 1440px;
-    display: none;
-    /* height: 0; */
-    justify-content: space-between;
-    transition: .5s;
-    padding: 0 2rem;
-}
-
-.container .active {
-    /* height: auto; */
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container .panel .hold {
+.container .inner .hold {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     padding: 2rem 0;
-    width: 80%;
+    width: 75%;
 }
 
-.container .panel .hold p {
+.container .inner .hold p {
     text-align: justify;
     margin-right: 2rem;
 }
 
-.container .panel .hold a {
+.container .inner .hold a {
     color: #fff;
     text-decoration: none;
     background: #636cff;
     padding: .5rem 1rem;
     border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 14px;
  }
 
-.container .panel img {
+.container .inner img {
     width: 15rem;
     margin: 2rem auto;
 }
 
 @media screen and (max-width: 991px) {
-    .container {
-        padding: 0 2rem;
-    }
-
+    .container {padding: 0 2rem;}
     .container h2 {font-size: 1.2rem;}
-
-    .container .panel {
+    
+    .container .inner {
         flex-direction: column-reverse;
-        padding: 0;
     }
+    
+    .container .inner .hold {width: 100%;}
 
-    .container .panel .hold {
-        width: 100%;
-    }
-
-    .container .panel .hold p {
-        width: 100%;
-    }
+    .container .inner .hold p {width: 100%;}
 
     .container .panel .hold a {
         padding: .5rem;
         font-size: .7rem;
         margin: 1rem 0 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container .inner img {
+        width: 10rem;
+        margin: 0;
+    }
+    
+    .container .inner .hold p {
+        text-align: left;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container .inner img {width: 8rem;}
+    
+    .container .inner .hold p {
+        font-size: 12px;
+    }
+
+    .container .inner .hold a {
+        font-size: 12px;
+     }    
+
+     .container .tab {
+        padding: -2rem .7rem .8rem;
+        margin-bottom: .6rem;
+        box-shadow: 0 5px 10px #00000099;
+    }
+        
+    .container .tab label {font-size: 12px;}
+
+    .container .tab label::after {
+        right: 1rem;
+        font-size: 1rem;
     }
 }

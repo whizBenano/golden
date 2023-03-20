@@ -2,7 +2,7 @@
     width: 100%;
     height: 80vh;
     display: flex;
-    padding: 3rem 10rem;
+    padding: 0rem 10rem;
 }
 
 .big .boxe {
@@ -14,10 +14,7 @@
     padding: 20px;
 }
 
-.big .boxe h2 {
-    text-align: center;
-    margin: 1rem 0;
-}
+.big .boxe h2 {text-align: center;}
 
 .big .boxe .enter {
     position: relative;
